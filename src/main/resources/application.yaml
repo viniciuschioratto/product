@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+mongoDB:
+  url: localhost
+  port: 27017
+  dataBase: productDB
+  collection: product
