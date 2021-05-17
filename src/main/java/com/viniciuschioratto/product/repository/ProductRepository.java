@@ -1,11 +1,10 @@
 package com.viniciuschioratto.product.repository;
 
 import com.viniciuschioratto.product.entity.Product;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.UUID;
+public interface ProductRepository extends MongoRepository<Product, String> {
 
-public interface ProductRepository extends MongoRepository<Product, UUID> {
-
-    Product findFirstById(UUID id);
+    Product findById(ObjectId id);
 }

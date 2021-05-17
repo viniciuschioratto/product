@@ -1,16 +1,16 @@
 package com.viniciuschioratto.product.entity;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 
 import java.util.Date;
-import java.util.UUID;
 
 public class Product {
 
     @Id
-    private UUID id = UUID.randomUUID();
+    private ObjectId id = new ObjectId();
     private String name;
     private String description;
     @CreatedDate
@@ -18,7 +18,7 @@ public class Product {
     @Version
     private String version;
 
-    public UUID getId() {
+    public ObjectId getId() {
         return id;
     }
 
